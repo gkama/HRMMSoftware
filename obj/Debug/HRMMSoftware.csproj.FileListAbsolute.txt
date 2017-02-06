@@ -1,0 +1,6 @@
+c:\users\gkam4141\documents\visual studio 2013\Projects\HRMMSoftware\HRMMSoftware\bin\Debug\HRMMSoftware.exe.config
+c:\users\gkam4141\documents\visual studio 2013\Projects\HRMMSoftware\HRMMSoftware\bin\Debug\HRMMSoftware.exe
+c:\users\gkam4141\documents\visual studio 2013\Projects\HRMMSoftware\HRMMSoftware\bin\Debug\HRMMSoftware.pdb
+c:\users\gkam4141\documents\visual studio 2013\Projects\HRMMSoftware\HRMMSoftware\obj\Debug\HRMMSoftware.csprojResolveAssemblyReference.cache
+c:\users\gkam4141\documents\visual studio 2013\Projects\HRMMSoftware\HRMMSoftware\obj\Debug\HRMMSoftware.exe
+c:\users\gkam4141\documents\visual studio 2013\Projects\HRMMSoftware\HRMMSoftware\obj\Debug\HRMMSoftware.pdb
