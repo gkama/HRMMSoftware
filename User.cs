@@ -129,6 +129,13 @@ namespace HRMMSoftware
             {
                 return (EndDate - StartDate).Days;
             }
+            public bool MatchDuration(int Years)
+            {
+                if (Convert.ToInt32(Duration().Split(' ')[0]) >= Years)
+                    return true;
+                else
+                    return false;
+            }
         }
     }
 }

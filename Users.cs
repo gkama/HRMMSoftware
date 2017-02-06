@@ -12,9 +12,7 @@ namespace HRMMSoftware
         List<User> UsersList = new List<User>();
 
         //Constructor
-        public Users()
-        {
-        }
+        public Users() { }
 
         //Add user
         public void AddUser(string FirstName,

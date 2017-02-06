@@ -20,11 +20,25 @@ namespace HRMMSoftware
     /// </summary>
     class Program
     {
+        
+
+        //Starting point
         static void Main(string[] args)
         {
+            //Variables
             Users users = new Users();
+            Jobs jobs = new Jobs();
+
+
             users.AddUser("George", "T", "Best", 24, "Bachelor", "9999999999", "gk@yahoo.com", "1234 Street Dr, KY", 
                 "Associate", new DateTime(2014, 8, 18), new DateTime(2017, 2, 6), "Convergys", "Cincinnati, OH", "Work as a programmer doing programmer stuff");
+
+            jobs.AddJob("this is a computer scienece job", 2, new List<string>() { "program", "code", "develop" },
+                new List<string>() { "c#", ".net", "asp.net" },
+                new List<string>() { "program", "code", "develop" },
+                new List<string>() { "work in team environment", "nice", "develop" },
+                new List<string>() { "c#", "program", "code" },
+                "Bachelor", 45000, 50000);
 
             Console.WriteLine("hello");
         }
