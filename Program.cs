@@ -20,8 +20,6 @@ namespace HRMMSoftware
     /// </summary>
     class Program
     {
-        
-
         //Starting point
         static void Main(string[] args)
         {
@@ -30,8 +28,8 @@ namespace HRMMSoftware
             Jobs jobs = new Jobs();
 
 
-            users.AddUser("George", "T", "Best", 24, "Bachelor", "9999999999", "gk@yahoo.com", "1234 Street Dr, KY", 
-                "Associate", new DateTime(2014, 8, 18), new DateTime(2017, 2, 6), "Convergys", "Cincinnati, OH", "Work as a programmer doing programmer stuff");
+            users.AddUser("George", "T", "Best", 24, "Bachelor", "Resume", "9999999999", "gk@yahoo.com", "1234 Street Dr, KY", 
+                "Associate", new DateTime(2014, 8, 18), new DateTime(2017, 2, 6), "Company", "Town, ST", "Work as a programmer doing programmer stuff");
 
             jobs.AddJob("this is a computer scienece job", 2, new List<string>() { "program", "code", "develop" },
                 new List<string>() { "c#", ".net", "asp.net" },
@@ -39,6 +37,9 @@ namespace HRMMSoftware
                 new List<string>() { "work in team environment", "nice", "develop" },
                 new List<string>() { "c#", "program", "code" },
                 "Bachelor", 45000, 50000);
+
+            MatchUsers mu = new MatchUsers(users, new List<string>() { "resume" }, 1);
+            MatchJobs mj = new MatchJobs(jobs, new List<string>() { "c#" }, 1);
 
             Console.WriteLine("hello");
         }

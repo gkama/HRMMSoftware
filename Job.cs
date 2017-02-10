@@ -8,6 +8,7 @@ namespace HRMMSoftware
 {
     public class Job
     {
+        //Variables
         public string GeneralDescription { get; set; }
         public int YearsExperience { get; set; }
         public List<string> Duties = new List<string>();
@@ -34,6 +35,37 @@ namespace HRMMSoftware
             this.Education = Education;
             this.StartingSalaryRangeStart = StartingSalaryRangeStart;
             this.StartingSalaryRangeEnd = StartingSalaryRangeEnd;
+        }
+        //Job with just a general description
+        public Job(string GeneralDescription)
+        {
+            this.GeneralDescription = GeneralDescription;
+        }
+
+        //Parse and store the whole job description
+        public List<string> ParseJob()
+        {
+            List<string> toReturn = new List<string>();
+            //Parsing
+            foreach (string s in GeneralDescription.Split(' ').ToList<string>())
+                toReturn.Add(s.Trim());
+            toReturn.Add(YearsExperience.ToString());
+            foreach (string d in Duties)
+                toReturn.Add(d.Trim());
+            foreach (string k in Knowledge)
+                toReturn.Add(k.Trim());
+            foreach (string ss in Skills)
+                toReturn.Add(ss.Trim());
+            foreach (string a in Abilities)
+                toReturn.Add(a.Trim());
+            foreach (string er in ExperienceRequirements)
+                toReturn.Add(er.Trim());
+            foreach (string e in Education.Split(' ').ToList<string>())
+                toReturn.Add(e.Trim());
+            toReturn.Add(StartingSalaryRangeStart.ToString());
+            toReturn.Add(StartingSalaryRangeEnd.ToString());
+
+            return toReturn;
         }
     }
 }

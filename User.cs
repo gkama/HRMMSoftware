@@ -13,22 +13,23 @@ namespace HRMMSoftware
         public string LastName { get; set; }
         public int Age { get; set; }
         public string EducationLevel { get; set; }
+        public string Resume { get; set; }
         public Contact ContactData { get; set; }
         public Experience ExperienceData { get; set; }
 
         //Constructor
         public User() { }
-        public User(string FirstName, string MiddleInitial, string LastName, int Age, string EducationLevel, Contact ContactData, Experience ExperienceData)
+        public User(string FirstName, string MiddleInitial, string LastName, int Age, string EducationLevel, string Resume, Contact ContactData, Experience ExperienceData)
         {
             this.FirstName = FirstName;
             this.MiddleInitial = MiddleInitial;
             this.LastName = LastName;
             this.Age = Age;
             this.EducationLevel = EducationLevel;
+            this.Resume = Resume;
             this.ContactData = ContactData;
             this.ExperienceData = ExperienceData;
         }
-
 
         //Contact information
         public class Contact
@@ -67,6 +68,7 @@ namespace HRMMSoftware
                 this.Description = Description;
             }
 
+            #region Duration
             //Work Duration
             public string Duration()
             {
@@ -136,6 +138,7 @@ namespace HRMMSoftware
                 else
                     return false;
             }
+            #endregion
         }
     }
 }

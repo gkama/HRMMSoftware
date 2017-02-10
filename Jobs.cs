@@ -30,5 +30,16 @@ namespace HRMMSoftware
                 ExperienceRequirements, Education, StartingSalaryRangeStart, StartingSalaryRangeEnd);
             JobsList.Add(job);
         }
+        //Add job with only general description
+        public void AddJob(string GeneralDescription)
+        {
+            Job job = new Job(GeneralDescription);
+        }
+
+        //Get users
+        public List<Job> GetJobs()
+        {
+            return this.JobsList;
+        }
     }
 }

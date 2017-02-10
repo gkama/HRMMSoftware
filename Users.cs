@@ -20,6 +20,7 @@ namespace HRMMSoftware
             string LastName,
             int Age,
             string EducationLevel,
+            string Resume,
             string PhoneNumber,
             string EmailAddress,
             string Address,
@@ -32,7 +33,7 @@ namespace HRMMSoftware
         {
             User.Contact _Contact = new User.Contact(PhoneNumber, EmailAddress, Address);
             User.Experience _Experience = new User.Experience(Title, StartDate, EndDate, Employer, Location, Description);
-            User user = new User(FirstName, MiddleInitial, LastName, Age, EducationLevel, _Contact, _Experience);
+            User user = new User(FirstName, MiddleInitial, LastName, Age, EducationLevel, Resume, _Contact, _Experience);
 
             //Add user
             UsersList.Add(user);
@@ -47,6 +48,12 @@ namespace HRMMSoftware
                     return u;
             }
             return new User();
+        }
+
+        //Get users
+        public List<User> GetUsers()
+        {
+            return this.UsersList;
         }
     }
 }
